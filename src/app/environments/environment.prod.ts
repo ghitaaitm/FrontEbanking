@@ -1,6 +1,6 @@
 // src/environments/environment.prod.ts
 export const environment = {
   production: true,
-  apiUrl: '/eBankingVer1/api/admin'
+  apiUrl: '/eBankingVer1'
 
 };

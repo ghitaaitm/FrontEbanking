@@ -1,3 +1,4 @@
+// src/app/admin/admin-dashboard/admin-dashboard.component.ts
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardService } from '../../services/dashboard.service';
@@ -10,7 +11,7 @@ import { DashboardService } from '../../services/dashboard.service';
   styleUrls: ['./admin-dashboard.component.css']
 })
 export class AdminDashboardComponent implements OnInit {
-  stats: { totalCurrencies: number; totalSettings: number; lastUpdate: Date } | null = null;
+  stats: { totalCurrencies: number; totalSettings: number; lastUpdate: string } | null = null; // Changed Date to string
   loading: boolean = true;
   error: string | null = null;
 

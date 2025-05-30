@@ -173,4 +173,11 @@ export class AccountsService {
       catchError(this.handleError)
     );
   }
+  bankAccountsList(): Observable<BankAccount[]> {
+    const url = `${environment.apiUrl}/bankAccounts`;  // URL à adapter selon backend
+    return this.http.get<BankAccount[]>(url, { headers: this.getHeaders() }).pipe(
+      timeout(this.REQUEST_TIMEOUT),
+      catchError(this.handleError)
+    );
+  }
 }
